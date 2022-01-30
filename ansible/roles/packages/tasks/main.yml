@@ -10,6 +10,8 @@
       - i3
       - i3-gaps
       - neovim
+      - nodejs
+      - npm
       - polybar
       - picom
       - ranger

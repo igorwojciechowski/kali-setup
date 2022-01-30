@@ -193,6 +193,7 @@ smart_borders on
 # ---
 # Startup
 # ---
+exec --no-startup-id vmware-user-suid-wrapper
 exec polybar top -c ~/.config/polybar/config.ini
 exec polybar bottom -c ~/.config/polybar/config.ini
 exec feh --bg-fill ~/Pictures/wallpaper.jpg

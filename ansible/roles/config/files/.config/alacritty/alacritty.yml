@@ -43,3 +43,6 @@ colors:
     magenta: '0xc0caf5'
     cyan:    '0x73daca'
     white:   '0xcfc9c2'
+
+env:
+  TERM: xterm-256color
