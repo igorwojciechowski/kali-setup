@@ -1,0 +1,15 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  become: yes
+  become_method: sudo
+  become_user: root
+
+  vars:
+    username: hostile
+
+  roles:
+    - packages
+    - nerd-font
+    - user
+    - config

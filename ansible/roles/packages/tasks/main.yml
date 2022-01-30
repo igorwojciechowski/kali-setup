@@ -1,0 +1,16 @@
+- name: Install packages
+  apt:
+    pkg:
+      - python3-pip
+      - exa
+      - cargo
+      - fish
+      - i3
+      - i3-gaps
+      - neovim
+      - polybar
+      - picom
+      - rofi
+    state: present
+    autoremove: yes
+    update_cache: yes

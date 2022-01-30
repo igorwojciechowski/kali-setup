@@ -1,0 +1,56 @@
+format = """
+[┌](bright-black)$username$jobs$time$cmd_duration$status
+[└](bright-black)$directory$git_branch$git_status$python
+ $character
+"""
+
+[username]
+format = '[─\[](bright-black)[$user]($style)[\]]( bright-black)'
+style_user = 'cyan'
+style_root = ' bright-red'
+disabled = false
+show_always = true
+
+[time]
+format = '[───\[]( bright-black)[$time]($style)[\]]( bright-black)'
+style = 'bright-black'
+disabled = false
+
+[cmd_duration]
+format = '[───\[]( bright-black)[$duration]($style)[\]]( bright-black)'
+style = ' bright-black'
+
+[directory]
+format = '[─\[]( bright-black)[ ]($style) [$path]($style)[\]]( bright-black)'
+style = 'cyan'
+
+[git_branch]
+format = '[─\[]( bright-black)[$symbol $branch]($style)[\]](bright-black)'
+symbol = ''
+style = ' bright-cyan'
+truncation_length = 30
+
+[git_status]
+format = '([─\[]( bright-black)[$all_status]($style)[\]](bright-black))'
+style = ' red'
+
+[python]
+format = '[─\[]( bright-black)[$symbol ($virtualenv )$version]($style)[\]](bright-black)'
+symbol = ''
+style = 'bright-cyan'
+
+[status]
+format = '[───\[]( bright-black)[$symbol $status]($style)[\]]( bright-black)'
+symbol = ''
+style = 'bright-red'
+disabled = false
+
+[character]
+success_symbol = "[]( bright-black) "
+error_symbol = "[]( bright-black) "
+
+[jobs]
+format = '[───\[]( bright-black)[$symbol $number]($style)[\]]( bright-black)'
+number_threshold = 1
+style = 'bright-green'
+symbol = ''

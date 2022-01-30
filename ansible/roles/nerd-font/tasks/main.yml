@@ -1,0 +1,15 @@
+- name: Download Hack NF font
+  get_url:
+    url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+    dest: "/home/{{ username }}/Downloads/Hack.zip"
+    mode: '0644'
+
+- name: Create fonts directory
+  file:
+    path: "/home/{{ username }}/.local/share/fonts"
+    state: directory
+
+- name: Extract font
+  unarchive:
+    src: "/home/{{ username }}/Downloads/Hack.zip"
+    dest: "/home/{{ username }}/.local/share/fonts"
