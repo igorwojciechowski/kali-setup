@@ -2,14 +2,17 @@
   apt:
     pkg:
       - python3-pip
-      - exa
       - cargo
+      - chromium
+      - exa
+      - feh
       - fish
       - i3
       - i3-gaps
       - neovim
       - polybar
       - picom
+      - ranger
       - rofi
     state: present
     autoremove: yes

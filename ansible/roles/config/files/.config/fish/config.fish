@@ -5,11 +5,11 @@ fish_add_path ~/.cargo/bin/
 
 # --- Fish colors
 set fish_color_command 'brcyan'
-set fish_color_error 'brred'
-set fish_color_param 'yellow'
+set fish_color_error 'red'
+set fish_color_param 'magenta'
 set fish_color_quote 'brgreen'
 set fish_color_search_match --background='blue'
-set fish_color_operator 'bryellow'
+set fish_color_operator 'brmagenta'
 set fish_color_end 'brgreen'
 set fish_color_redirection 'brgreen'
 set color_prompt 'brblack'
