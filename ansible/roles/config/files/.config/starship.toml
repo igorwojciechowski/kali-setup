@@ -1,56 +1,56 @@
 format = """
-[┌](bright-black)$username$jobs$time$cmd_duration$status
-[└](bright-black)$directory$git_branch$git_status$python
+[┌](bright-green)$username$jobs$time$cmd_duration$status
+[└](bright-green)$directory$git_branch$git_status$python
  $character
 """
 
 [username]
-format = '[─\[](bright-black)[$user]($style)[\]]( bright-black)'
+format = '[─\[](bright-green)[$user]($style)[\]]( bright-green)'
 style_user = 'cyan'
 style_root = ' bright-red'
 disabled = false
 show_always = true
 
 [time]
-format = '[───\[]( bright-black)[$time]($style)[\]]( bright-black)'
-style = 'bright-black'
+format = '[───\[]( bright-green)[$time]($style)[\]]( bright-green)'
+style = 'bright-green'
 disabled = false
 
 [cmd_duration]
-format = '[───\[]( bright-black)[$duration]($style)[\]]( bright-black)'
-style = ' bright-black'
+format = '[───\[]( bright-green)[$duration]($style)[\]]( bright-green)'
+style = ' bright-green'
 
 [directory]
-format = '[─\[]( bright-black)[ ]($style) [$path]($style)[\]]( bright-black)'
+format = '[─\[]( bright-green)[ ]($style) [$path]($style)[\]]( bright-green)'
 style = 'cyan'
 
 [git_branch]
-format = '[─\[]( bright-black)[$symbol $branch]($style)[\]](bright-black)'
+format = '[─\[]( bright-green)[$symbol $branch]($style)[\]](bright-green)'
 symbol = ''
-style = ' bright-cyan'
+style = ' green'
 truncation_length = 30
 
 [git_status]
-format = '([─\[]( bright-black)[$all_status]($style)[\]](bright-black))'
-style = ' red'
+format = '([─\[]( bright-green)[$all_status]($style)[\]](bright-green))'
+style = 'bright-red'
 
 [python]
-format = '[─\[]( bright-black)[$symbol ($virtualenv )$version]($style)[\]](bright-black)'
+format = '[─\[]( bright-green)[$symbol ($virtualenv )$version]($style)[\]](bright-green)'
 symbol = ''
 style = 'bright-cyan'
 
 [status]
-format = '[───\[]( bright-black)[$symbol $status]($style)[\]]( bright-black)'
+format = '[───\[]( bright-green)[$symbol $status]($style)[\]]( bright-green)'
 symbol = ''
 style = 'bright-red'
 disabled = false
 
 [character]
-success_symbol = "[]( bright-black) "
-error_symbol = "[]( bright-black) "
+success_symbol = "[]( bright-green) "
+error_symbol = "[]( bright-green) "
 
 [jobs]
-format = '[───\[]( bright-black)[$symbol $number]($style)[\]]( bright-black)'
+format = '[───\[]( bright-green)[$symbol $number]($style)[\]]( bright-green)'
 number_threshold = 1
 style = 'bright-green'
 symbol = ''

@@ -32,15 +32,16 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " --- Colorscheme
+set background=dark
 set termguicolors
-let g:tokyonight_style = "storm"
-colorscheme tokyonight
+colorscheme solarized8
 
 " --- Airline config
-let g:airline_theme='base16'
+let g:airline_theme='solarized'
 
 " --- NerdTree
 let NERDTreeShowHidden=1
@@ -51,3 +52,8 @@ map <C-t> :NERDTreeToggle<CR>
 let g:fzf_preview_window = 'right:50%'
 let g:fzf_layout = { 'window': { 'width': 0.5, 'height': 0.5  }  }
 nnoremap <silent> <C-p> :Files<CR>
+
+" --- coc
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references
