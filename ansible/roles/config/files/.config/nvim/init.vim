@@ -32,16 +32,16 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'lifepillar/vim-solarized8'
+    Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " --- Colorscheme
 set background=dark
 set termguicolors
-colorscheme solarized8
+colorscheme palenight
 
 " --- Airline config
-let g:airline_theme='solarized'
+let g:airline_theme='palenight'
 
 " --- NerdTree
 let NERDTreeShowHidden=1
