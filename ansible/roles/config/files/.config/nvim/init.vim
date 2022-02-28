@@ -32,16 +32,17 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'lifepillar/vim-solarized8'
+    Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
 " --- Colorscheme
+let g:tokyonight_style = 'storm'
 set background=dark
 set termguicolors
-colorscheme solarized8
+colorscheme tokyonight
 
 " --- Airline config
-let g:airline_theme='solarized'
+let g:airline_theme='tokyonight'
 
 " --- NerdTree
 let NERDTreeShowHidden=1

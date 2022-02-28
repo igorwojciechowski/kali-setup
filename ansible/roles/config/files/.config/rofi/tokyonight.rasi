@@ -9,11 +9,11 @@ configuration {
 }
 
 * {
-  background-color: #073642;
-  black: #073642;
-  magenta: #d33682;
-  cyan: #2aa198;
-  white: #eee8d5; 
+  background-color: #24283b;
+  black: #414868;
+  magenta: #bb9af7;
+  cyan: #b4f9f8;
+  white: #cfc9c2; 
 
   lines: 12;
   padding: 0;
