@@ -175,7 +175,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Custom
-bindsym $mod+space exec "rofi -show drun -theme moonlight"
+bindsym $mod+space exec "rofi -show drun -theme nord"
 
 # ---
 # Window Style

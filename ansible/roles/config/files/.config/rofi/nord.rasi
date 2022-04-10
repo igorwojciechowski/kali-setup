@@ -9,11 +9,11 @@ configuration {
 }
 
 * {
-  background-color: #212337;
-  black: #212337;
-  magenta: #b4a4f4;
-  cyan: #2df4c0;
-  white: #e4f3fa; 
+  background-color: #2E3440;
+  black: #2E3440;
+  blue: #81A1C1;
+  cyan: #88C0D0;
+  white: #ECEFF4; 
 
   lines: 12;
   padding: 0;
@@ -55,12 +55,12 @@ prompt {
   enabled: true;
   font: "Hack Nerd Font Bold 12";
   padding: 12 0 0 12;
-  text-color: @magenta;
+  text-color: @blue;
 }
 
 entry {
   padding: 12;
-  text-color: @magenta;
+  text-color: @blue;
 }
 
 element-text {

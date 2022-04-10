@@ -8,7 +8,7 @@ $status$character
 
 [username]
 format = '[](bright-black)[ $user]($style)[ ](bright-black)'
-style_user = 'bg:bright-black fg:cyan'
+style_user = 'bg:bright-black fg:blue'
 style_root = 'bg:bright-black fg:bright-red'
 disabled = false
 show_always = true
@@ -19,7 +19,7 @@ style = 'bg:bright-black fg:blue'
 
 [directory]
 format = '[](bright-black)[ $path]($style)[ ](bright-black)'
-style = 'bg:bright-black fg:green'
+style = 'bg:bright-black fg:cyan'
 
 [git_branch]
 format = '[](bright-black)[$symbol $branch]($style)'
