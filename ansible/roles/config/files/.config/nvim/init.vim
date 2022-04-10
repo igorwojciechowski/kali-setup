@@ -31,16 +31,13 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'shaunsingh/moonlight.nvim'
+    Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " --- Colorscheme
 set background=dark
 set termguicolors
-colorscheme moonlight
-
-" --- Airline config
-let g:airline_theme='base16_dracula'
+colorscheme nord
 
 " --- NerdTree
 let NERDTreeShowHidden=1
