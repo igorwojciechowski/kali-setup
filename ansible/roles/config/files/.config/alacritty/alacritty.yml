@@ -1,5 +1,5 @@
-shell:
-  program: "C:\\Windows\\System32\\wsl.exe ~ -u hostile"
+# shell:
+#   program: "C:\\Windows\\System32\\wsl.exe ~ -u hostile"
 
 window:
   padding:
