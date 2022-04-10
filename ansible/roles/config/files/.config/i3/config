@@ -181,26 +181,15 @@ bindsym $mod+space exec "rofi -show drun -theme nord"
 # Window Style
 # ---
 
-# default_border none
-# hide_edge_borders none
-
-for_window [class=".*"] border pixel 2
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #81A1C1 #81A1C1 #ECEFF4 #81A1C1   #81A1C1
-client.focused_inactive #2E3440 #2E3440 #ECEFF4 #2E3440   #2E3440
-client.unfocused        #2E3440 #2E3440 #ECEFF4 #2E3440   #2E3440
-client.urgent           #2E3440 #2E3440 #ECEFF4 #2E3440   #2E3440
-client.placeholder      #2E3440 #2E3440 #ECEFF4 #2E3440   #2E3440
-
-client.background       #2E3440
+default_border none
+hide_edge_borders none
 
 gaps inner 30
 gaps outer 15
 gaps bottom 35
 gaps top 35
 
-# smart_borders on
+smart_borders on
 # ---
 # Startup
 # ---
