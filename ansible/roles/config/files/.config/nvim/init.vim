@@ -27,21 +27,17 @@ call plug#begin('~/.nvim/plugged')
     Plug 'francoiscabrol/ranger.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'nicwest/vim-http'
-    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
     Plug 'sheerun/vim-polyglot'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'lifepillar/vim-solarized8'
+    Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " --- Colorscheme
 set background=dark
 set termguicolors
-colorscheme solarized8
-
-" --- Airline config
-let g:airline_theme='solarized'
+colorscheme nord
 
 " --- NerdTree
 let NERDTreeShowHidden=1

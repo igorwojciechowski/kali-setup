@@ -175,7 +175,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Custom
-bindsym $mod+space exec "rofi -show drun -theme solarized"
+bindsym $mod+space exec "rofi -show drun -theme nord"
 
 # ---
 # Window Style
@@ -196,5 +196,5 @@ smart_borders on
 exec --no-startup-id vmware-user-suid-wrapper
 exec polybar top -c ~/.config/polybar/config.ini
 exec polybar bottom -c ~/.config/polybar/config.ini
-exec feh --bg-fill ~/Pictures/solarized.png
+exec feh --bg-fill ~/Pictures/wallpaper.jpg
 exec picom
