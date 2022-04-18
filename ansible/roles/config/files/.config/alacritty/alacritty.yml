@@ -1,12 +1,12 @@
-# shell:
-#   program: "C:\\Windows\\System32\\wsl.exe ~ -u hostile"
+shell:
+  # program: "C:\\Windows\\System32\\wsl.exe ~ -u hostile"
 
 window:
   padding:
     x: 15
     y: 15
 
-# background_opacity: 0.8
+background_opacity: 0.95
 
 font:
   normal:
@@ -19,35 +19,34 @@ font:
     family: "Hack Nerd Font"
     style: "Light Italic"
   size: 10
-
 colors:
   primary:
-    background: '0x2E3440'
-    foreground: '0xECEFF4'
+    background: '0x191919'
+    foreground: '0xe6e6e6'
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0xECEFF4'
-    cursor: '0x88C0D0'
+    text: '0xE6E6E6'
+    cursor: '0x5A9CA0'
   # Normal colors
   normal:
-    black:   '0x2E3440'
-    red:     '0xBF616A'
-    green:   '0xA3BE8C'
-    yellow:  '0xD08770'
-    blue:    '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan:    '0x8FBCBB'
-    white:   '0xe4f3fa'
+    black:   '0x191919'
+    red:     '0xde5959'
+    green:   '0x549E93'
+    yellow:  '0xFFCE48'
+    blue:    '0x4B6981'
+    magenta: '0x804b81'
+    cyan:    '0x5A9CA0'
+    white:   '0xE6E6E6'
   # Bright colors
   bright:
-    black:   '0x4C566A'
-    red:     '0xBF616A'
-    green:   '0xA3BE8C'
-    yellow:  '0xD08770'
-    blue:    '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan:    '0x8FBCBB'
-    white:   '0xECEFF4'
+    black:   '0x2a2a2a'
+    red:     '0x814B4B'
+    green:   '0x2F383B'
+    yellow:  '0x3E4B50'
+    blue:    '0x56686E'
+    magenta: '0x647A81'
+    cyan:    '0x819EA7'
+    white:   '0xE6E6E6'
 
 env:
   TERM: xterm-256color
