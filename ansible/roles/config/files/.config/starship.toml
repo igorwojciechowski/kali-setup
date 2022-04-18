@@ -24,7 +24,7 @@ style = 'bg:bright-black fg:cyan'
 [git_branch]
 format = '[](bright-black)[$symbol $branch]($style)'
 symbol = ''
-style = 'bg:bright-black fg:bright-green'
+style = 'bg:bright-black fg:green'
 truncation_length = 30
 
 [git_status]
