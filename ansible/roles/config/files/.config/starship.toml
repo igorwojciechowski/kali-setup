@@ -1,56 +1,65 @@
+right_format = "$python$golang$nodejs"
+
 format = """
-[┌](bright-green)$username$jobs$time$cmd_duration$status
-[└](bright-green)$directory$git_branch$git_status$python
- $character
+$username$directory$git_branch$git_status$jobs$cmd_duration
+
+$status$character
 """
 
 [username]
-format = '[─\[](bright-green)[$user]($style)[\]]( bright-green)'
-style_user = 'cyan'
-style_root = ' bright-red'
+format = '[](bright-black)[ $user]($style)[ ](bright-black)'
+style_user = 'bg:bright-black fg:blue'
+style_root = 'bg:bright-black fg:bright-red'
 disabled = false
 show_always = true
 
-[time]
-format = '[───\[]( bright-green)[$time]($style)[\]]( bright-green)'
-style = 'bright-green'
-disabled = false
-
 [cmd_duration]
-format = '[───\[]( bright-green)[$duration]($style)[\]]( bright-green)'
-style = ' bright-green'
+format = '[](bright-black)[祥$duration]($style)[ ](bright-black)'
+style = 'bg:bright-black fg:blue'
 
 [directory]
-format = '[─\[]( bright-green)[ ]($style) [$path]($style)[\]]( bright-green)'
-style = 'cyan'
+format = '[](bright-black)[ $path]($style)[ ](bright-black)'
+style = 'bg:bright-black fg:cyan'
 
 [git_branch]
-format = '[─\[]( bright-green)[$symbol $branch]($style)[\]](bright-green)'
+format = '[](bright-black)[$symbol $branch]($style)'
 symbol = ''
-style = ' green'
+style = 'bg:bright-black fg:green'
 truncation_length = 30
 
 [git_status]
-format = '([─\[]( bright-green)[$all_status]($style)[\]](bright-green))'
-style = 'bright-red'
-
-[python]
-format = '[─\[]( bright-green)[$symbol ($virtualenv )$version]($style)[\]](bright-green)'
-symbol = ''
-style = 'bright-cyan'
+format = '[ $all_status]($style)[ ](bright-black)'
+style = 'bg:bright-black fg:bright-red'
 
 [status]
-format = '[───\[]( bright-green)[$symbol $status]($style)[\]]( bright-green)'
+format = '[](bright-black)[$symbol $status]($style)'
 symbol = ''
-style = 'bright-red'
+style = 'fg:bright-red bg:bright-black'
 disabled = false
 
 [character]
-success_symbol = "[]( bright-green) "
-error_symbol = "[]( bright-green) "
+success_symbol = '[](bright-black)[](bg:bright-black fg:green)[](bright-black)'
+error_symbol = '[ ](bg:bright-black fg:green)[](bright-black)'
 
 [jobs]
-format = '[───\[]( bright-green)[$symbol $number]($style)[\]]( bright-green)'
+format = '[](bright-black)[$symbol $number]($style)[ ](bright-black)'
 number_threshold = 1
-style = 'bright-green'
+style = 'fg:bright-yellow bg:bright-black'
 symbol = ''
+
+# Languages
+
+[python]
+format = '[](bright-black)[$symbol ($virtualenv )$version]($style)[ ](bright-black)'
+symbol = ''
+style = 'fg:yellow bg:bright-black'
+
+[golang]
+format = '[](bright-black)[$symbol $version]($style)[ ](bright-black)'
+symbol = ''
+style = 'fg:blue bg:bright-black'
+
+[nodejs]
+format = '[](bright-black)[$symbol $version]($style)[ ](bright-black)'
+symbol = ''
+style = 'fg:green bg:bright-black'

@@ -19,30 +19,28 @@ set softtabstop=4
 
 " --- VimPlug
 call plug#begin('~/.nvim/plugged')
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
     Plug 'rbgrouleff/bclose.vim'
     Plug 'francoiscabrol/ranger.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'nicwest/vim-http'
-    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
     Plug 'sheerun/vim-polyglot'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'ghifarit53/tokyonight-vim'
+    Plug 'rainglow/vim'
+    Plug 'folke/tokyonight.nvim'
+    Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " --- Colorscheme
-let g:tokyonight_style = 'storm'
 set background=dark
-set termguicolors
+let g:tokyonight_style = 'night'
 colorscheme tokyonight
 
-" --- Airline config
-let g:airline_theme='tokyonight'
+let g:lightline = {'colorscheme': 'tokyonight'}
+
 
 " --- NerdTree
 let NERDTreeShowHidden=1
@@ -57,4 +55,4 @@ nnoremap <silent> <C-p> :Files<CR>
 " --- coc
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references
+nmap <silent> gr <Plug>(coc-referencesi
