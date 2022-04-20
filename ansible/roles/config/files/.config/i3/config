@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec ~/.cargo/bin/alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -175,7 +175,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Custom
-bindsym $mod+space exec "rofi -show drun -theme nord"
+bindsym $mod+space exec "rofi -show drun -theme tokyonight"
 
 # ---
 # Window Style
@@ -193,7 +193,7 @@ smart_borders on
 # ---
 # Startup
 # ---
-exec polybar nord-top -c ~/.config/polybar/config.ini
-exec polybar nord-bottom -c ~/.config/polybar/config.ini
-exec feh --bg-fill ~/Pictures/amnesia.png
+exec polybar top -c ~/.config/polybar/config.ini
+exec polybar bottom -c ~/.config/polybar/config.ini
+exec feh --bg-fill ~/Pictures/tokyonight.png
 exec picom
