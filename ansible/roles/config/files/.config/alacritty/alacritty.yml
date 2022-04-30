@@ -6,48 +6,42 @@ window:
     x: 15
     y: 15
 
-# background_opacity: 0.8
-
 font:
   normal:
     family: "Hack Nerd Font"
     style: Bold
-  bold: 
+  bold:
     family: "Hack Nerd Font"
     style: Bold
   italic:
     family: "Hack Nerd Font"
     style: "Light Italic"
   size: 10
-
 colors:
   primary:
-    background: '0x2E3440'
-    foreground: '0xECEFF4'
-  # Colors the cursor will use if `custom_cursor_colors` is true
+    background: '0x23252e'
+    foreground: '0xffffff'
   cursor:
-    text: '0xECEFF4'
-    cursor: '0x88C0D0'
-  # Normal colors
+    text: '0xffffff'
+    cursor: '0x5A9CA1'
   normal:
-    black:   '0x2E3440'
-    red:     '0xBF616A'
-    green:   '0xA3BE8C'
-    yellow:  '0xD08770'
-    blue:    '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan:    '0x8FBCBB'
-    white:   '0xe4f3fa'
-  # Bright colors
+    black:   '0x23252e'
+    red:     '0xd41919'
+    green:   '0x5ebdac'
+    yellow:  '0xfea44c'
+    blue:    '0x367af0'
+    magenta: '0x9755b3'
+    cyan:    '0x49afe6'
+    white:   '0xffffff'
   bright:
-    black:   '0x4C566A'
-    red:     '0xBF616A'
-    green:   '0xA3BE8C'
-    yellow:  '0xD08770'
-    blue:    '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan:    '0x8FBCBB'
-    white:   '0xECEFF4'
+    black:   '0x464a5c'
+    red:     '0xd41919'
+    green:   '0x5ebdac'
+    yellow:  '0xff8c18'
+    blue:    '0x277dff'
+    magenta: '0x952ac3'
+    cyan:    '0x05a2f7'
+    white:   '0xffffff'
 
 env:
   TERM: xterm-256color

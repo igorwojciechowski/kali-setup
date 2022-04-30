@@ -19,8 +19,6 @@ set softtabstop=4
 
 " --- VimPlug
 call plug#begin('~/.nvim/plugged')
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
     Plug 'rbgrouleff/bclose.vim'
@@ -31,13 +29,14 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'arcticicestudio/nord-vim'
+    Plug 'rainglow/vim'
+    Plug 'itchyny/lightline.vim'
+    Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " --- Colorscheme
 set background=dark
-set termguicolors
-colorscheme nord
+
 
 " --- NerdTree
 let NERDTreeShowHidden=1
@@ -52,4 +51,4 @@ nnoremap <silent> <C-p> :Files<CR>
 " --- coc
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references
+nmap <silent> gr <Plug>(coc-referencesi

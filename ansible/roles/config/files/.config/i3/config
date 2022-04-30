@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec ~/.cargo/bin/alacritty 
+bindsym $mod+Return exec ~/.cargo/bin/alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -174,8 +174,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Focus
+focus_follows_mouse no
+
 # Custom
-bindsym $mod+space exec "rofi -show drun -theme nord"
+bindsym $mod+space exec "rofi -show drun -theme kali-dark"
 
 # ---
 # Window Style
@@ -193,8 +196,7 @@ smart_borders on
 # ---
 # Startup
 # ---
-exec --no-startup-id vmware-user-suid-wrapper
 exec polybar top -c ~/.config/polybar/config.ini
 exec polybar bottom -c ~/.config/polybar/config.ini
-exec feh --bg-fill ~/Pictures/wallpaper.jpg
+exec feh --bg-fill /usr/share/backgrounds/kali/kali-light-strips-16x9.png
 exec picom
