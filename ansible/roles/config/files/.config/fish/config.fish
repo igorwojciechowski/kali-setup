@@ -2,11 +2,14 @@ starship init fish | source
 set fish_greeting ""
 
 fish_add_path ~/.cargo/bin/
+fish_add_path -g /sbin/
+set PATH /sbin/ $PATH
+set PATH /snap/bin/ $PATH
 
 # --- Fish colors
 set fish_color_command 'brcyan'
 set fish_color_error 'brred'
-set fish_color_param 'brgreen'
+set fish_color_param 'cyan'
 set fish_color_quote 'green'
 set fish_color_search_match --background='blue'
 set fish_color_operator 'brblue'

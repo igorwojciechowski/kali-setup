@@ -1,65 +1,76 @@
-right_format = "$python$golang$nodejs"
+right_format = "$python$golang$nodejs$time"
 
-format = """
-$username$directory$git_branch$git_status$jobs$cmd_duration
-
-$status$character
+format = """[┌─](bright-black)$username$hostname${custom.vpn}$status$cmd_duration
+[└──](bright-black)$directory$git_branch$git_status
+  $character
 """
 
 [username]
-format = '[](bright-black)[ $user]($style)[ ](bright-black)'
-style_user = 'bg:bright-black fg:blue'
-style_root = 'bg:bright-black fg:bright-red'
+format = '[\[ ](bright-black)[$user]($style)'
+style_user = 'fg:blue'
+style_root = 'fg:bright-red'
 disabled = false
 show_always = true
 
+[hostname]
+format = '[㉿$hostname]($style)[ \]](bright-black)'
+style = "fg:blue"
+ssh_only = false
+
 [cmd_duration]
-format = '[](bright-black)[祥$duration]($style)[ ](bright-black)'
-style = 'bg:bright-black fg:blue'
+format = '[───\[](bright-black)[ 祥$duration]($style)[ \]](bright-black)'
+style = 'fg:bright-black'
 
 [directory]
-format = '[](bright-black)[ $path]($style)[ ](bright-black)'
-style = 'bg:bright-black fg:cyan'
+format = '[\[ ](bright-black)[ $path]($style)[ \]](bright-black)'
+style = 'fg:cyan'
 
 [git_branch]
-format = '[](bright-black)[$symbol $branch]($style)'
+format = '[─\[ ](bright-black)[$symbol $branch]($style)'
 symbol = ''
-style = 'bg:bright-black fg:green'
+style = 'fg:green'
 truncation_length = 30
 
 [git_status]
-format = '[ $all_status]($style)[ ](bright-black)'
-style = 'bg:bright-black fg:bright-red'
+format = '[ $all_status]($style)[ \]](bright-black)'
+style = 'fg:bright-red'
 
 [status]
-format = '[](bright-black)[$symbol $status]($style)'
+format = '[───\[ ](bright-black)[$symbol$status]($style)[ \]](bright-black)'
 symbol = ''
-style = 'fg:bright-red bg:bright-black'
+style = 'fg:bright-red'
 disabled = false
 
 [character]
-success_symbol = '[](bright-black)[](bg:bright-black fg:green)[](bright-black)'
-error_symbol = '[ ](bg:bright-black fg:green)[](bright-black)'
+success_symbol = '[](fg:bright-black)'
+error_symbol = '[](fg:bright-black)'
 
-[jobs]
-format = '[](bright-black)[$symbol $number]($style)[ ](bright-black)'
-number_threshold = 1
-style = 'fg:bright-yellow bg:bright-black'
-symbol = ''
+[time]
+format = '[\[ ](bright-black)[$time]($style)[ \]](bright-black)'
+style = 'fg:bright-black'
+disabled = false
 
 # Languages
 
 [python]
-format = '[](bright-black)[$symbol ($virtualenv )$version]($style)[ ](bright-black)'
+format = '[\[ ](bright-black)[$symbol ($virtualenv )$version]($style)[ \]─](bright-black)'
 symbol = ''
-style = 'fg:yellow bg:bright-black'
+style = 'fg:yellow'
 
 [golang]
-format = '[](bright-black)[$symbol $version]($style)[ ](bright-black)'
+format = '[\[ ](bright-black)[$symbol $version]($style)[ \]─](bright-black)'
 symbol = ''
-style = 'fg:blue bg:bright-black'
+style = 'fg:blue'
 
 [nodejs]
-format = '[](bright-black)[$symbol $version]($style)[ ](bright-black)'
+format = '[\[ ](bright-black)[$symbol $version]($style)[ \]─](bright-black)'
 symbol = ''
-style = 'fg:green bg:bright-black'
+style = 'fg:green'
+
+# tun0
+[custom.vpn]
+command = "ifconfig tun0 | grep -oP \"(?<=inet )(\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3})\""
+shell = 'bash'
+format = '[─\[ ](bright-black)[ $output]($style)[ \]](bright-black)'
+when = 'ifconfig tun0'
+style = 'fg:cyan'
